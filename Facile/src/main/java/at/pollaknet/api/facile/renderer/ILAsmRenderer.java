@@ -196,9 +196,9 @@ public class ILAsmRenderer implements LanguageRenderer {
 				":" +
 				minorVersion +
 				":" +
-				revisionNumber +
+				buildNumber +
 				":" +
-				buildNumber;
+				revisionNumber;
 	}
 
 	@Override
