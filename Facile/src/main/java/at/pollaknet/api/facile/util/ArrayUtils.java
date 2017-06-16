@@ -27,10 +27,10 @@ public class ArrayUtils {
 		if(array==null) return "null";
 		StringBuffer buffer = new StringBuffer(array.length*3);
 		
-		buffer.append(String.format("%02x", array[0]));
+		buffer.append(String.format("%02x".toUpperCase(), array[0]));
 		
 		for(int i=1;i<array.length;i++) {
-			buffer.append(String.format(" %02x", array[i]));
+			buffer.append(String.format(" %02x".toUpperCase(), array[i]));
 		}
 		
 		return buffer.toString();
@@ -130,7 +130,7 @@ public class ArrayUtils {
 		int i;
 		
 		for(i=0;i<length;i++) {
-			stringBuffer.append(String.format("%02x ", byteBuffer[i]));
+			stringBuffer.append(String.format("%02x ".toUpperCase(), byteBuffer[i]));
 			if((i&0x0f)==0x0f){
 				byte [] buffer = new byte[16];
 				System.arraycopy(byteBuffer,i-15,buffer,0,16);
